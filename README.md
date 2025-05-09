@@ -6,4 +6,4 @@
 
 ### The Challenge
 
-Written as Bootstrap
+Written with Bootstrap
