@@ -3,43 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts: Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'light-blue': 'hsl(212, 45%, 89%)',
-            'dark-navy': 'hsl(218, 44%, 22%)',
-            'grayish-blue': 'hsl(220, 15%, 55%)',
-            'white': 'hsl(0, 0%, 100%)'
-          },
-          fontFamily: {
-            outfit: ['Outfit', 'sans-serif']
-          }
-        }
-      }
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --light-blue: hsl(212, 45%, 89%);
+      --dark-navy: hsl(218, 44%, 22%);
+      --grayish-blue: hsl(220, 15%, 55%);
     }
-  </script>
+    body {
+      background-color: var(--light-blue);
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+    .card {
+      max-width: 360px;
+      transition: box-shadow 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+    }
+    .card-title {
+      color: var(--dark-navy);
+      font-weight: 700;
+    }
+    .card-text {
+      color: var(--grayish-blue);
+    }
+  </style>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | QR Code Component</title>
 </head>
-<body class="bg-light-blue font-outfit flex justify-center items-center min-h-screen p-4">
-  <article class="bg-white rounded-2xl p-4 max-w-[360px] shadow-md hover:shadow-lg transition">
-    <img src="./images/image-qr-code.png" alt="QR code to visit Frontend Mentor" class="w-full rounded-lg mb-4">
-    <section class="text-center">
-      <h2 class="text-dark-navy text-xl font-bold mb-3">
+<body>
+  <div class="card rounded-4 shadow-sm p-3">
+    <img src="./images/image-qr-code.png" alt="QR code to visit Frontend Mentor" class="card-img-top rounded-3 mb-3">
+    <div class="card-body text-center">
+      <h2 class="card-title fs-4 mb-3">
         Improve your front-end skills by building projects
       </h2>
-      <p class="text-grayish-blue text-base leading-relaxed mb-4">
+      <p class="card-text mb-3">
         Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
       </p>
-    </section>
-  </article>
+    </div>
+  </div>
 </body>
 </html>
